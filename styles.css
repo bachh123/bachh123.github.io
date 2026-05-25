@@ -1,0 +1,120 @@
+/* Base */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Poppins', sans-serif; background: #0a0a0a; color: #fff; }
+.container { width: 90%; max-width: 1200px; margin: auto; }
+
+/* Title */
+.title a { text-decoration: none; color: inherit; }
+
+/* Navigation */
+.nav-header { background: #000000; padding: 1rem 0; position: sticky; top: 0; z-index: 100; }
+.nav-container { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.8rem; font-weight: 700; color: #fff; align-items: center; display: flex; }
+.logo span { color: #1efbff; margin-left: 5px;}
+.logo img { width: 50px; height: 50px;}
+.main-nav a { margin-left: 1.5rem; text-decoration: none; color: #fff; font-weight: 500; }
+.main-nav a:hover { color: #1efbff; }
+
+/* Hero */
+.hero { height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center; }
+.hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+.hero p { font-size: 1.2rem; margin-bottom: 1.8rem; }
+.btn-primary { padding: .75rem 2rem; background: #1efbff; border: none; color: #111; cursor: pointer; border-radius: 4px; font-weight: 600; }
+
+/* background */
+.main-page {background: url('imgs/Background.png') bottom/cover no-repeat;}
+.battle-puzzle-merge-minions-page {background: url('battle_puzzle_match_minions/imgs/bg.png') bottom/cover no-repeat;}
+
+/* Sections */
+.section { padding: 3rem 0; text-align: center; }
+.features .cards { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 1rem; }
+.card { background: #171717; padding: 1.4rem; width: 30%; border-radius: 8px; transition: transform .3s; }
+.card:hover { transform: scale(1.05); }
+.card img { width: 60px; margin-bottom: 1rem; }
+.card a { text-decoration: none; color: inherit; }
+.card-big img { width: 15rem; margin-bottom: 1rem; }
+
+/* Policy */
+.policy { padding: 3rem 0; }
+
+/* Roadmap */
+.roadmap ul { list-style: none; margin-top: 1rem; font-size: 1rem; }
+
+/* Footer */
+.footer { background: #121212; padding: 1.5rem 0; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .features .cards { flex-direction: column; }
+  .card { width: 80%; margin: auto; }
+}
+
+/* Animations */
+.fade-up {
+  opacity: 0;
+}
+
+.active {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.6s forwards;
+}
+
+.delay-1 { animation-delay: .3s; }
+.delay-2 { animation-delay: .6s; }
+.delay-3 { animation-delay: .9s; }
+
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Utility */
+.responsive-img { width: 100%; max-width: 600px; margin-top: 1.5rem; border-radius: 12px; }
+
+/* Glow button */
+.glow-btn {
+  position: relative;
+  padding: 0.65rem 2.0rem;
+  margin: 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0b0e13;
+  background: #1efbff;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  align-items: center;
+  display: inline-flex;
+}
+.glow-btn img { width: 30px; height: 30px; margin-right: 10px;}
+
+/* SOFT GLOW */
+.glow-btn::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: inherit;
+  background: #1efbff;
+  filter: blur(16px);
+  opacity: 0.6;
+  z-index: -1;
+  transition: opacity 0.2s ease;
+}
+
+/* HOVER */
+.glow-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(30, 251, 255, 0.6);
+}
+
+.glow-btn:hover::before {
+  opacity: 1;
+}
+
+/* ACTIVE */
+.glow-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 5px 15px rgba(30, 251, 255, 0.4);
+}
