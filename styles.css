@@ -41,7 +41,7 @@ body { font-family: 'Poppins', sans-serif; background: #0a0a0a; color: #fff; }
   height: 100vh;    
   overflow: hidden;  
 }
-.video-container video {
+.video-container .video-source {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -70,18 +70,18 @@ body { font-family: 'Poppins', sans-serif; background: #0a0a0a; color: #fff; }
 /* Responsive */
 
 @media (max-width: 1080px) {
-  .video-container video { left: 80%;}
+  .video-container .video-source { left: 80%;}
 }
 
 @media (max-width: 768px) {
   .features .cards { flex-direction: column; }
   .card { width: 80%; margin: auto; }
   .video-container { height: 60vh; }
-  .video-container video { left: 100%;}
+  .video-container .video-source { left: 100%;}
 }
 
 @media (max-width: 480px) {
-  .video-container video { left: 120%;}
+  .video-container .video-source { left: 120%;}
 }
 
 /* Animations */
