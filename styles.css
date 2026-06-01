@@ -68,17 +68,18 @@ body { font-family: 'Poppins', sans-serif; background: #0a0a0a; color: #fff; }
 
 /* Responsive */
 
-/* @media (max-width: 1080px) {
-} */
+@media (max-width: 1080px) {
+  .main-nav { font-size: 12px;}
+}
 
 @media (max-width: 768px) {
   .features .cards { flex-direction: column; }
   .card { width: 80%; margin: auto; }
-  .main-nav { font-size: 12px;}
+  .main-nav { font-size: 10px;}
 }
 
 @media (max-width: 480px) {
-  .main-nav { font-size: 10px;}
+  .main-nav { font-size: 8px;}
 }
 
 /* Animations */
